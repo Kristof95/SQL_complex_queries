@@ -1,0 +1,1 @@
+SELECT  OrderDetails.*, p.ProductName,OrderDetails.UnitPrice * OrderDetails.Quantity * (1- OrderDetails.Discount) AS 'Total'  FROM OrderDetails INNER JOIN Products as p ON OrderDetails.ProductID = p.ProductID ORDER BY OrderDetails.OrderID;
